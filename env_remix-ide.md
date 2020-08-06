@@ -1,10 +1,9 @@
-# solc
+# remix-ide
 ```
-brew update
-brew upgrade
-brew tap ethereum/ethereum
-brew install solidity
+合约开发和测试工具
 ```
-
-
-https://solidity.readthedocs.io/en/v0.4.24/installing-solidity.html
+git clone https://github.com/ethereum/remix-ide.git
+cd remix-ide
+npm install
+npm run build && npm run serve
+```
