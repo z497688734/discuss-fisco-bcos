@@ -17,3 +17,14 @@ demo:复制节点搭建
 demo:新特性的演示或者源码查看
 八:总结
        对比主流链和解决问题的初心
+
+
+权限控制
+https://mp.weixin.qq.com/s?__biz=MzA3MTI5Njg4Mw==&mid=2247485317&idx=1&sn=4a7cf90cc727382af2099d11f67d8b0e&scene=19#wechat_redirect
+
+仲裁节点环境搭建
+https://mp.weixin.qq.com/s?__biz=MzA3MTI5Njg4Mw==&mid=2247485337&idx=1&sn=622e88b631ae1bfe5789b2fe21576779&scene=19#wechat_redirect
+
+
+
+

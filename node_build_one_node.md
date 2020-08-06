@@ -4,7 +4,7 @@ mac下安装
 目前我们官方文档给出的环境搭建都是在linux下测试运行的，实际上调整一下,也能在mac上运行。mac环境需要先安装openssl curl的环境;
 ```
 下载自动脚本
-curl -LO https://github.com/FISCO-BCOS/FISCO-BCOS/releases/download/v2.5.0/build_chain.sh && chmod u+x build_chain.sh
+curl -LO https://github.com/FISCO-BCOS/FISCO-BCOS/releases/download/v2.5.0/build_chain.sh && chmod a+x build_chain.sh
 初始化环境
 ./build_chain.sh -l "127.0.0.1:1"
 启动

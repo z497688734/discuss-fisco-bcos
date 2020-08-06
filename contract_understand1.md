@@ -1,0 +1,182 @@
+# 合约是什么
+
+合约的本质是一段在链上执行的代码
+
+#字节码(ByteCode)是什么
+   源码通过编译可以形成字节码
+
+   字节码是一种包含执行程序、由一序列 op 代码/数据对组成的二进制文件
+
+   字节码与硬件无关,需要在特定的虚拟机中执行
+
+   ```
+   solc --bin --opcodes  Demo.sol
+
+   Opcodes:
+PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 SSTORE CALLVALUE DUP1 ISZERO PUSH2 0x14 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x40 MLOAD PUSH2 0x100 CODESIZE SUB DUP1 PUSH2 0x100 DUP4 CODECOPY DUP2 DUP2 ADD PUSH1 0x40 MSTORE PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x37 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 DUP1 DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 SWAP3 SWAP2 SWAP1 POP POP POP DUP1 PUSH1 0xF ADD PUSH1 0x0 DUP2 SWAP1 SSTORE POP POP PUSH1 0x9F DUP1 PUSH2 0x61 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x87DB03B7 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x56 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 DUP1 DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP1 SWAP3 SWAP2 SWAP1 POP POP POP PUSH1 0x58 JUMP JUMPDEST STOP JUMPDEST PUSH1 0xE DUP2 PUSH1 0x0 SLOAD ADD ADD PUSH1 0x0 DUP2 SWAP1 SSTORE POP POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MULMOD 0xB0 DUP1 DUP3 0x29 PUSH5 0x66A65F1CDA SLOAD 0x2D 0xA7 0xA7 0x27 CREATE2 SIGNEXTEND 0xC PUSH4 0x448C75AD SELFDESTRUCT PUSH6 0xB9F7CA9FA4F0 PUSH5 0x736F6C6343 STOP MOD 0xC STOP CALLER
+Binary:
+
+60806040526000805534801561001457600080fd5b506040516101003803806101008339818101604052602081101561003757600080fd5b810190808051906020019092919050505080600f0160008190555050609f806100616000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806387db03b714602d575b600080fd5b605660048036036020811015604157600080fd5b81019080803590602001909291905050506058565b005b600e8160005401016000819055505056fea264697066735822122009b08082296466a65f1cda542da7a727f50b0c63448c75adff65b9f7ca9fa4f064736f6c634300060c0033
+```
+
+#ABI(Application Binary Interface)是什么
+
+ABI是定义以太坊合约调用的一种格式。
+
+定义调用的函数签名，参数编码，返回结果编码等。
+
+```
+solc --bin --abi    Demo.sol
+
+[{"inputs":[{"internalType":"int256","name":"y","type":"int256"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"int256","name":"x","type":"int256"}],"name":"add","outputs":[],"stateMutability":"nonpayable","type":"function"}]
+
+```
+
+#ABI上链么
+
+在执行合约或者调用合约的过程种使用到了ABI
+ABI本身不上链
+
+#为什么用到ABI
+既然不上链为什么要用ABI呢？
+
+创建合约和调用合约本身有想通的地方,都是发一笔交易,改变账户或者账本状态。
+
+
+在创建合约的时候,如果有构造方法,那构造方法的参数必须要通过ABI才能实现编码.
+
+执行合约的时候,参数需要编码才能放入交易.
+
+```
+https://github.com/ethereum/web3.js/blob/1.x/packages/web3-eth-contract/src/index.js
+
+//发布部署合约
+Contract.prototype.deploy = function(options, callback){
+
+    options = options || {};
+
+    options.arguments = options.arguments || [];
+    options = this._getOrSetDefaultOptions(options);
+
+
+    // throw error, if no "data" is specified
+    if(!options.data) {
+        if (typeof callback === 'function'){
+            return callback(errors.ContractMissingDeployDataError());
+        }
+        throw errors.ContractMissingDeployDataError();
+    }
+
+    var constructor = _.find(this.options.jsonInterface, function (method) {
+        return (method.type === 'constructor');
+    }) || {};
+    constructor.signature = 'constructor';
+
+    return this._createTxObject.apply({
+        method: constructor,
+        parent: this,
+        deployData: options.data,
+        _ethAccounts: this.constructor._ethAccounts
+    }, options.arguments);
+
+};
+
+
+//创建交易
+Contract.prototype._createTxObject =  function _createTxObject(){
+    var args = Array.prototype.slice.call(arguments);
+    var txObject = {};
+
+    if(this.method.type === 'function') {
+
+        txObject.call = this.parent._executeMethod.bind(txObject, 'call');
+        txObject.call.request = this.parent._executeMethod.bind(txObject, 'call', true); // to make batch requests
+
+    }
+
+    txObject.send = this.parent._executeMethod.bind(txObject, 'send');
+    txObject.send.request = this.parent._executeMethod.bind(txObject, 'send', true); // to make batch requests
+    txObject.encodeABI = this.parent._encodeMethodABI.bind(txObject);
+    txObject.estimateGas = this.parent._executeMethod.bind(txObject, 'estimate');
+
+    if (args && this.method.inputs && args.length !== this.method.inputs.length) {
+        if (this.nextMethod) {
+            return this.nextMethod.apply(null, args);
+        }
+        throw errors.InvalidNumberOfParams(args.length, this.method.inputs.length, this.method.name);
+    }
+
+    txObject.arguments = args || [];
+    txObject._method = this.method;
+    txObject._parent = this.parent;
+    txObject._ethAccounts = this.parent.constructor._ethAccounts || this._ethAccounts;
+
+    if(this.deployData) {
+        txObject._deployData = this.deployData;
+    }
+
+    return txObject;
+};
+
+//encode ABI
+Contract.prototype._encodeMethodABI = function _encodeMethodABI() {
+    var methodSignature = this._method.signature,
+        args = this.arguments || [];
+
+    var signature = false,
+        paramsABI = this._parent.options.jsonInterface.filter(function (json) {
+            return ((methodSignature === 'constructor' && json.type === methodSignature) ||
+                ((json.signature === methodSignature || json.signature === methodSignature.replace('0x','') || json.name === methodSignature) && json.type === 'function'));
+        }).map(function (json) {
+            var inputLength = (_.isArray(json.inputs)) ? json.inputs.length : 0;
+
+            if (inputLength !== args.length) {
+                throw new Error('The number of arguments is not matching the methods required number. You need to pass '+ inputLength +' arguments.');
+            }
+
+            if (json.type === 'function') {
+                signature = json.signature;
+            }
+            return _.isArray(json.inputs) ? json.inputs : [];
+        }).map(function (inputs) {
+            return abi.encodeParameters(inputs, args).replace('0x','');
+        })[0] || '';
+
+    // return constructor
+    if(methodSignature === 'constructor') {
+        if(!this._deployData)
+            throw new Error('The contract has no contract data option set. This is necessary to append the constructor parameters.');
+
+        if(!this._deployData.startsWith('0x')) {
+            this._deployData = '0x' + this._deployData;
+        }
+
+        return this._deployData + paramsABI;
+
+    }
+
+    // return method
+    var returnValue = (signature) ? signature + paramsABI : paramsABI;
+
+    if(!returnValue) {
+        throw new Error('Couldn\'t find a matching contract method named "'+ this._method.name +'".');
+    }
+
+    return returnValue;
+};
+
+
+```
+
+
+#合约是如何运行的
+
+调研合约
+```
+//input
+0x87db03b70000000000000000000000000000000000000000000000000000000000000001
+
+//获取结果
+eth.getStorageAt("0xde2F6913ED3cdfD3220F5A6706DfA68AD325B018",0)
+
+```
