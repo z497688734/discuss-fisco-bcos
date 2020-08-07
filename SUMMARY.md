@@ -12,6 +12,7 @@
    * [多节点搭建](node_build_mul_node.md)
    * [多群组多节点搭建](node_build_mul_group_mul_node.md)
    * [浏览器搭建](node_build_browser.md)
+* [模块介绍](module.md)
 * [合约](contract_root.md)
    * [以太坊合约部署](contract_eth_build.md)
    * [fisco-bcos合约部署](contract_fisco-bcos_build.md)
