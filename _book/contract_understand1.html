@@ -1,0 +1,624 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>理解合约一 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="contract_understand2.html" />
+    
+    
+    <link rel="prev" href="contract_fisco-bcos_build.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduce.html">
+            
+                <a href="introduce.html">
+            
+                    
+                    fisco-bcos介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="introduce_white_paper.html">
+            
+                <a href="introduce_white_paper.html">
+            
+                    
+                    白皮书介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="introduce_buss.html">
+            
+                <a href="introduce_buss.html">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    环境搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="env_solc.html">
+            
+                <a href="env_solc.html">
+            
+                    
+                    solc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="env_remix-ide.html">
+            
+                <a href="env_remix-ide.html">
+            
+                    
+                    remix-ide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="node_build.html">
+            
+                <a href="node_build.html">
+            
+                    
+                    节点搭建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="node_build_one_node.html">
+            
+                <a href="node_build_one_node.html">
+            
+                    
+                    单节点搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="node_build_mul_node.html">
+            
+                <a href="node_build_mul_node.html">
+            
+                    
+                    多节点搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="node_build_mul_group_mul_node.html">
+            
+                <a href="node_build_mul_group_mul_node.html">
+            
+                    
+                    多群组多节点搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="node_build_browser.html">
+            
+                <a href="node_build_browser.html">
+            
+                    
+                    浏览器搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="contract_root.html">
+            
+                <a href="contract_root.html">
+            
+                    
+                    合约
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="contract_eth_build.html">
+            
+                <a href="contract_eth_build.html">
+            
+                    
+                    以太坊合约部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="contract_fisco-bcos_build.html">
+            
+                <a href="contract_fisco-bcos_build.html">
+            
+                    
+                    fisco-bcos合约部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="contract_understand1.html">
+            
+                <a href="contract_understand1.html">
+            
+                    
+                    理解合约一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="contract_understand2.html">
+            
+                <a href="contract_understand2.html">
+            
+                    
+                    理解合约二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="contract_understand3.html">
+            
+                <a href="contract_understand3.html">
+            
+                    
+                    理解合约三
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >理解合约一</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5408;&#x7EA6;&#x662F;&#x4EC0;&#x4E48;">&#x5408;&#x7EA6;&#x662F;&#x4EC0;&#x4E48;</h1>
+<p>&#x5408;&#x7EA6;&#x7684;&#x672C;&#x8D28;&#x662F;&#x4E00;&#x6BB5;&#x5728;&#x94FE;&#x4E0A;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;</p>
+<h1 id="&#x5B57;&#x8282;&#x7801;bytecode&#x662F;&#x4EC0;&#x4E48;">&#x5B57;&#x8282;&#x7801;(ByteCode)&#x662F;&#x4EC0;&#x4E48;</h1>
+<p>   &#x6E90;&#x7801;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x53EF;&#x4EE5;&#x5F62;&#x6210;&#x5B57;&#x8282;&#x7801;</p>
+<p>   &#x5B57;&#x8282;&#x7801;&#x662F;&#x4E00;&#x79CD;&#x5305;&#x542B;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x3001;&#x7531;&#x4E00;&#x5E8F;&#x5217; op &#x4EE3;&#x7801;/&#x6570;&#x636E;&#x5BF9;&#x7EC4;&#x6210;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</p>
+<p>   &#x5B57;&#x8282;&#x7801;&#x4E0E;&#x786C;&#x4EF6;&#x65E0;&#x5173;,&#x9700;&#x8981;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x865A;&#x62DF;&#x673A;&#x4E2D;&#x6267;&#x884C;</p>
+<pre><code>   solc --bin --opcodes  Demo.sol
+
+   Opcodes:
+PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 SSTORE CALLVALUE DUP1 ISZERO PUSH2 0x14 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x40 MLOAD PUSH2 0x100 CODESIZE SUB DUP1 PUSH2 0x100 DUP4 CODECOPY DUP2 DUP2 ADD PUSH1 0x40 MSTORE PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x37 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 DUP1 DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 SWAP3 SWAP2 SWAP1 POP POP POP DUP1 PUSH1 0xF ADD PUSH1 0x0 DUP2 SWAP1 SSTORE POP POP PUSH1 0x9F DUP1 PUSH2 0x61 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x87DB03B7 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x56 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 DUP1 DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP1 SWAP3 SWAP2 SWAP1 POP POP POP PUSH1 0x58 JUMP JUMPDEST STOP JUMPDEST PUSH1 0xE DUP2 PUSH1 0x0 SLOAD ADD ADD PUSH1 0x0 DUP2 SWAP1 SSTORE POP POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MULMOD 0xB0 DUP1 DUP3 0x29 PUSH5 0x66A65F1CDA SLOAD 0x2D 0xA7 0xA7 0x27 CREATE2 SIGNEXTEND 0xC PUSH4 0x448C75AD SELFDESTRUCT PUSH6 0xB9F7CA9FA4F0 PUSH5 0x736F6C6343 STOP MOD 0xC STOP CALLER
+Binary:
+
+60806040526000805534801561001457600080fd5b506040516101003803806101008339818101604052602081101561003757600080fd5b810190808051906020019092919050505080600f0160008190555050609f806100616000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806387db03b714602d575b600080fd5b605660048036036020811015604157600080fd5b81019080803590602001909291905050506058565b005b600e8160005401016000819055505056fea264697066735822122009b08082296466a65f1cda542da7a727f50b0c63448c75adff65b9f7ca9fa4f064736f6c634300060c0033
+</code></pre><h1 id="abiapplication-binary-interface&#x662F;&#x4EC0;&#x4E48;">ABI(Application Binary Interface)&#x662F;&#x4EC0;&#x4E48;</h1>
+<p>ABI&#x662F;&#x5B9A;&#x4E49;&#x4EE5;&#x592A;&#x574A;&#x5408;&#x7EA6;&#x8C03;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x683C;&#x5F0F;&#x3002;</p>
+<p>&#x5B9A;&#x4E49;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x7B7E;&#x540D;&#xFF0C;&#x53C2;&#x6570;&#x7F16;&#x7801;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7F16;&#x7801;&#x7B49;&#x3002;</p>
+<pre><code>solc --bin --abi    Demo.sol
+
+[{&quot;inputs&quot;:[{&quot;internalType&quot;:&quot;int256&quot;,&quot;name&quot;:&quot;y&quot;,&quot;type&quot;:&quot;int256&quot;}],&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;constructor&quot;},{&quot;inputs&quot;:[{&quot;internalType&quot;:&quot;int256&quot;,&quot;name&quot;:&quot;x&quot;,&quot;type&quot;:&quot;int256&quot;}],&quot;name&quot;:&quot;add&quot;,&quot;outputs&quot;:[],&quot;stateMutability&quot;:&quot;nonpayable&quot;,&quot;type&quot;:&quot;function&quot;}]
+</code></pre><h1 id="abi&#x4E0A;&#x94FE;&#x4E48;">ABI&#x4E0A;&#x94FE;&#x4E48;</h1>
+<p>&#x5728;&#x6267;&#x884C;&#x5408;&#x7EA6;&#x6216;&#x8005;&#x8C03;&#x7528;&#x5408;&#x7EA6;&#x7684;&#x8FC7;&#x7A0B;&#x79CD;&#x4F7F;&#x7528;&#x5230;&#x4E86;ABI
+ABI&#x672C;&#x8EAB;&#x4E0D;&#x4E0A;&#x94FE;</p>
+<h1 id="&#x4E3A;&#x4EC0;&#x4E48;&#x7528;&#x5230;abi">&#x4E3A;&#x4EC0;&#x4E48;&#x7528;&#x5230;ABI</h1>
+<p>&#x65E2;&#x7136;&#x4E0D;&#x4E0A;&#x94FE;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;ABI&#x5462;&#xFF1F;</p>
+<p>&#x521B;&#x5EFA;&#x5408;&#x7EA6;&#x548C;&#x8C03;&#x7528;&#x5408;&#x7EA6;&#x672C;&#x8EAB;&#x6709;&#x60F3;&#x901A;&#x7684;&#x5730;&#x65B9;,&#x90FD;&#x662F;&#x53D1;&#x4E00;&#x7B14;&#x4EA4;&#x6613;,&#x6539;&#x53D8;&#x8D26;&#x6237;&#x6216;&#x8005;&#x8D26;&#x672C;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x5728;&#x521B;&#x5EFA;&#x5408;&#x7EA6;&#x7684;&#x65F6;&#x5019;,&#x5982;&#x679C;&#x6709;&#x6784;&#x9020;&#x65B9;&#x6CD5;,&#x90A3;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x8981;&#x901A;&#x8FC7;ABI&#x624D;&#x80FD;&#x5B9E;&#x73B0;&#x7F16;&#x7801;.</p>
+<p>&#x6267;&#x884C;&#x5408;&#x7EA6;&#x7684;&#x65F6;&#x5019;,&#x53C2;&#x6570;&#x9700;&#x8981;&#x7F16;&#x7801;&#x624D;&#x80FD;&#x653E;&#x5165;&#x4EA4;&#x6613;.</p>
+<pre><code>https://github.com/ethereum/web3.js/blob/1.x/packages/web3-eth-contract/src/index.js
+
+//&#x53D1;&#x5E03;&#x90E8;&#x7F72;&#x5408;&#x7EA6;
+Contract.prototype.deploy = function(options, callback){
+
+    options = options || {};
+
+    options.arguments = options.arguments || [];
+    options = this._getOrSetDefaultOptions(options);
+
+
+    // throw error, if no &quot;data&quot; is specified
+    if(!options.data) {
+        if (typeof callback === &apos;function&apos;){
+            return callback(errors.ContractMissingDeployDataError());
+        }
+        throw errors.ContractMissingDeployDataError();
+    }
+
+    var constructor = _.find(this.options.jsonInterface, function (method) {
+        return (method.type === &apos;constructor&apos;);
+    }) || {};
+    constructor.signature = &apos;constructor&apos;;
+
+    return this._createTxObject.apply({
+        method: constructor,
+        parent: this,
+        deployData: options.data,
+        _ethAccounts: this.constructor._ethAccounts
+    }, options.arguments);
+
+};
+
+
+//&#x521B;&#x5EFA;&#x4EA4;&#x6613;
+Contract.prototype._createTxObject =  function _createTxObject(){
+    var args = Array.prototype.slice.call(arguments);
+    var txObject = {};
+
+    if(this.method.type === &apos;function&apos;) {
+
+        txObject.call = this.parent._executeMethod.bind(txObject, &apos;call&apos;);
+        txObject.call.request = this.parent._executeMethod.bind(txObject, &apos;call&apos;, true); // to make batch requests
+
+    }
+
+    txObject.send = this.parent._executeMethod.bind(txObject, &apos;send&apos;);
+    txObject.send.request = this.parent._executeMethod.bind(txObject, &apos;send&apos;, true); // to make batch requests
+    txObject.encodeABI = this.parent._encodeMethodABI.bind(txObject);
+    txObject.estimateGas = this.parent._executeMethod.bind(txObject, &apos;estimate&apos;);
+
+    if (args &amp;&amp; this.method.inputs &amp;&amp; args.length !== this.method.inputs.length) {
+        if (this.nextMethod) {
+            return this.nextMethod.apply(null, args);
+        }
+        throw errors.InvalidNumberOfParams(args.length, this.method.inputs.length, this.method.name);
+    }
+
+    txObject.arguments = args || [];
+    txObject._method = this.method;
+    txObject._parent = this.parent;
+    txObject._ethAccounts = this.parent.constructor._ethAccounts || this._ethAccounts;
+
+    if(this.deployData) {
+        txObject._deployData = this.deployData;
+    }
+
+    return txObject;
+};
+
+//encode ABI
+Contract.prototype._encodeMethodABI = function _encodeMethodABI() {
+    var methodSignature = this._method.signature,
+        args = this.arguments || [];
+
+    var signature = false,
+        paramsABI = this._parent.options.jsonInterface.filter(function (json) {
+            return ((methodSignature === &apos;constructor&apos; &amp;&amp; json.type === methodSignature) ||
+                ((json.signature === methodSignature || json.signature === methodSignature.replace(&apos;0x&apos;,&apos;&apos;) || json.name === methodSignature) &amp;&amp; json.type === &apos;function&apos;));
+        }).map(function (json) {
+            var inputLength = (_.isArray(json.inputs)) ? json.inputs.length : 0;
+
+            if (inputLength !== args.length) {
+                throw new Error(&apos;The number of arguments is not matching the methods required number. You need to pass &apos;+ inputLength +&apos; arguments.&apos;);
+            }
+
+            if (json.type === &apos;function&apos;) {
+                signature = json.signature;
+            }
+            return _.isArray(json.inputs) ? json.inputs : [];
+        }).map(function (inputs) {
+            return abi.encodeParameters(inputs, args).replace(&apos;0x&apos;,&apos;&apos;);
+        })[0] || &apos;&apos;;
+
+    // return constructor
+    if(methodSignature === &apos;constructor&apos;) {
+        if(!this._deployData)
+            throw new Error(&apos;The contract has no contract data option set. This is necessary to append the constructor parameters.&apos;);
+
+        if(!this._deployData.startsWith(&apos;0x&apos;)) {
+            this._deployData = &apos;0x&apos; + this._deployData;
+        }
+
+        return this._deployData + paramsABI;
+
+    }
+
+    // return method
+    var returnValue = (signature) ? signature + paramsABI : paramsABI;
+
+    if(!returnValue) {
+        throw new Error(&apos;Couldn\&apos;t find a matching contract method named &quot;&apos;+ this._method.name +&apos;&quot;.&apos;);
+    }
+
+    return returnValue;
+};
+</code></pre><h1 id="&#x5408;&#x7EA6;&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7684;">&#x5408;&#x7EA6;&#x662F;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x7684;</h1>
+<p>&#x8C03;&#x7814;&#x5408;&#x7EA6;</p>
+<pre><code>//input
+0x87db03b70000000000000000000000000000000000000000000000000000000000000001
+
+//&#x83B7;&#x53D6;&#x7ED3;&#x679C;
+eth.getStorageAt(&quot;0xde2F6913ED3cdfD3220F5A6706DfA68AD325B018&quot;,0)
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="contract_fisco-bcos_build.html" class="navigation navigation-prev " aria-label="Previous page: fisco-bcos合约部署">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="contract_understand2.html" class="navigation navigation-next " aria-label="Next page: 理解合约二">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"理解合约一","level":"1.5.3","depth":2,"next":{"title":"理解合约二","level":"1.5.4","depth":2,"path":"contract_understand2.md","ref":"contract_understand2.md","articles":[]},"previous":{"title":"fisco-bcos合约部署","level":"1.5.2","depth":2,"path":"contract_fisco-bcos_build.md","ref":"contract_fisco-bcos_build.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings"],"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contract_understand1.md","mtime":"2020-08-06T08:34:28.439Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-06T10:20:17.566Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
