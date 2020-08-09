@@ -13,10 +13,19 @@
    * [多群组多节点搭建](node_build_mul_group_mul_node.md)
    * [浏览器搭建](node_build_browser.md)
 * [模块介绍](module.md)
+* [执行流程](flow.md)
+   * [交易执行](flow_tx_run.md)   
+   * [区块打包](flow_block_run.md)
+   * [共识过程](flow_consensus_run.md)
 * [合约](contract_root.md)
    * [以太坊合约部署](contract_eth_build.md)
    * [fisco-bcos合约部署](contract_fisco-bcos_build.md)
-   * [理解合约一](contract_understand1.md)
-   * [理解合约二](contract_understand2.md)
-   * [理解合约三](contract_understand3.md)
+   * [合约名词解释](contract_definition.md)
+   * [合约ABI作用](contract_abi.md)
+   * [合约代码拆分](contract_split.md)
+   * [合约构造方法](contract_constructor.md)
+   * [合约运行方法](contract_runtime.md)
+   * [合约析构方法](contract_de_constructor.md)
+
+
 
