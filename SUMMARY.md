@@ -12,12 +12,14 @@
    * [多节点搭建](node_build_mul_node.md)
    * [多群组多节点搭建](node_build_mul_group_mul_node.md)
    * [浏览器搭建](node_build_browser.md)
-* [模块介绍](module.md)
 * [执行流程](flow.md)
    * [交易执行](flow_tx_run.md)   
    * [交易同步](flow_sync_tx.md)
    * [状态同步](flow_sync_status.md)
    * [共识过程](flow_consensus_run.md)
+* [模块介绍](module.md)
+   * [证书](module_cert.md)
+   * [binLogReader](module_bin_log.md)   
 * [合约](contract_root.md)
    * [以太坊合约部署](contract_eth_build.md)
    * [fisco-bcos合约部署](contract_fisco-bcos_build.md)
@@ -27,6 +29,9 @@
    * [合约构造方法](contract_constructor.md)
    * [合约运行方法](contract_runtime.md)
    * [合约析构方法](contract_de_constructor.md)
+* [项目](project.md)
+   * [发行资产](project_asset.md)
+
 
 
 
